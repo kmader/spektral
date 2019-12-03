@@ -27,9 +27,9 @@ jobs:
     - name: Just one epoch
       run: |
         sed -i -e 's/epochs = /epochs = 1 #/g' examples/*.py
-    - name: Graph Signal
+    - name: Run all examples
       run: |
         cd examples/
-        python graph_signal_classification_mnist.py
+        python *.py
         cd ..
         
